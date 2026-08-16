@@ -1,2 +1,2 @@
 # Customer-360-Data-Platform
-A modern AWS Data Lake + Data Warehouse solution that unifies customer interactions across multiple systems to generate business insights using AWS Glue and Amazon Redshift.
+The project is a modern AWS Data Lake + Data Warehouse platform that collects customer data from multiple business systems, processes and standardizes it using AWS Glue, stores raw/curated data in Amazon S3, and loads analytics-ready data into Amazon Redshift.
