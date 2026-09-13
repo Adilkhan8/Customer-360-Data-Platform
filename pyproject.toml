@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer360-data-platform"
+version = "0.1.0"
+description = "Customer 360 raw CSV ingestion to Amazon S3"
+requires-python = ">=3.8"
+dependencies = [
+    "boto3>=1.26,<2.0",
+]
+
+[project.scripts]
+customer360-upload-raw = "customer360_ingestion.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

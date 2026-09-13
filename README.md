@@ -77,3 +77,54 @@ Purchase Pattern Analysis – Analyze customer purchasing behavior, order freque
 Objective
 
 The primary objective of this project is to build a reliable, scalable, and analytics-ready Customer 360 data platform that transforms raw operational data into trusted business insights while supporting incremental processing and data quality controls.
+
+## Raw CSV Ingestion
+
+The first Python component validates and uploads one dated source batch to the S3 raw zone. The uploader expects these files in a dated directory:
+
+```text
+data/raw/YYYY-MM-DD/
+├── customers.csv
+├── orders.csv
+├── website_visits.csv
+└── support_tickets.csv
+```
+
+### Setup
+
+Create a virtual environment and install the project dependencies:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-dev.txt
+```
+
+Configure AWS credentials using the AWS CLI or the standard boto3 environment/profile configuration. The identity needs permission to upload objects to the target bucket.
+
+### Validate Without Uploading
+
+Use the dry run to validate headers, count rows, and print the target S3 keys:
+
+```powershell
+python -m customer360_ingestion --bucket customer360-example --dry-run
+```
+
+### Upload To S3
+
+Run the same command without `--dry-run` once the target bucket and AWS credentials are ready:
+
+```powershell
+python -m customer360_ingestion --bucket customer360-example
+```
+
+By default, files are uploaded to `s3://<bucket>/raw/<date>/<filename>`. A different local batch or S3 prefix can be supplied with `--source-dir` and `--prefix`.
+
+### Tests
+
+Run the unit tests without AWS credentials:
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m unittest discover -s tests -v
+```
