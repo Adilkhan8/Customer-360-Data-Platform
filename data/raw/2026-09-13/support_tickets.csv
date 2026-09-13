@@ -1,0 +1,5 @@
+ticket_id,customer_id,created_at,category,priority,status,resolved_at
+TKT9001,CUST001,2026-09-02T11:30:00Z,delivery,normal,resolved,2026-09-03T15:10:00Z
+TKT9002,CUST002,2026-09-10T13:45:00Z,payment,high,open,
+TKT9003,CUST003,2026-09-06T09:25:00Z,product_quality,normal,resolved,2026-09-08T17:40:00Z
+TKT9004,CUST004,2026-08-26T10:15:00Z,account,low,resolved,2026-08-27T12:00:00Z

@@ -1,0 +1,9 @@
+visit_id,customer_id,visit_timestamp,page_url,device,traffic_source
+VIS5001,CUST001,2026-09-01T09:14:00Z,/products/wireless-headphones,mobile,organic
+VIS5002,CUST001,2026-09-07T18:42:00Z,/checkout,desktop,email
+VIS5003,CUST002,2026-09-02T12:06:00Z,/products/mechanical-keyboard,desktop,paid_search
+VIS5004,CUST002,2026-09-09T08:31:00Z,/products/webcam,mobile,organic
+VIS5005,CUST003,2026-09-04T16:20:00Z,/products/office-chair,tablet,social
+VIS5006,CUST003,2026-09-11T10:05:00Z,/account/orders,desktop,email
+VIS5007,CUST004,2026-08-25T14:55:00Z,/support,desktop,direct
+VIS5008,CUST004,2026-09-12T20:11:00Z,/home,mobile,direct

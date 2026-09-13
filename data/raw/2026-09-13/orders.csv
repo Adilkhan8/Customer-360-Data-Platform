@@ -1,0 +1,7 @@
+order_id,customer_id,order_date,product_id,product_name,quantity,unit_price,order_status
+ORD1001,CUST001,2026-09-01,PROD101,Wireless Headphones,1,79.99,completed
+ORD1002,CUST001,2026-09-08,PROD205,USB-C Charging Cable,2,14.50,completed
+ORD1003,CUST002,2026-09-03,PROD310,Mechanical Keyboard,1,129.00,completed
+ORD1004,CUST003,2026-09-05,PROD415,Ergonomic Office Chair,1,249.99,shipped
+ORD1005,CUST004,2026-08-28,PROD101,Wireless Headphones,1,79.99,returned
+ORD1006,CUST002,2026-09-10,PROD520,Webcam,1,59.95,pending
